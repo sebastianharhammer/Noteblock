@@ -1,0 +1,199 @@
+body {
+    margin:0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Bad Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+header {
+    background-color: lightgrey;
+    border: solid 2px;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%);
+    display: flex;
+    justify-content: center;
+    height: 20vh;
+}
+#placeholder-header {
+    height: 20vh;
+    width: 100vw;
+    position:absolute;
+    z-index: 999;
+}
+button {
+    cursor: pointer;
+    background-color: black;
+    color:white;
+    border-radius: 10px;
+    padding: 6px;
+    margin-top: 10px;
+    font-size: 28px;
+}
+button:hover {
+    filter: drop-shadow(2px 4px 6px rgb(10, 10, 10, 50%));
+    transition-duration: 125ms;
+}
+
+h1 {
+    font-size: 75px;
+    text-align: center;
+}
+@media (max-width: 580px)
+{
+    h1 {
+        font-size: 40px;
+    }
+    #plus {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 95vw;
+    align-items: center;
+    align-content: center;
+    max-width: 1440px;
+    
+}
+
+#plus {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+#plus:hover {
+    filter: drop-shadow(2px 4px 6px rgb(10, 10, 10, 50%));
+    transition-duration: 125ms;
+}
+#trash {
+    width: 50px;
+    height: 50px;
+    padding-bottom:10px;
+    cursor: pointer;
+}
+#trash:hover {
+    filter: drop-shadow(2px 4px 6px rgb(10, 10, 10, 50%));
+    transition-duration: 125ms;
+}
+#trash-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 20px;
+}
+
+#content {
+    flex-direction: column-reverse;
+    display: flex;
+    width: 90em;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 1440px;
+    
+}
+.new-note {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background-color: #aefcff;
+    border: 5px solid rgb(41, 41, 41);
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 999;
+    position: absolute;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    max-width: 1440px;
+    top:30px;
+    bottom:150px;
+    margin-top:420px;
+            }
+#inp {
+    display: flex;
+    flex-direction: column;
+}
+#title {
+    width: 50vw;
+    max-width: 1440px;
+    font-size: 32px;
+    font-family: "Bad Script", cursive;
+    font-weight: 800;
+    font-style: normal;
+    border: 2px solid black;
+}
+#note {
+    font-size: 30px;
+    width: 50vw;
+    max-width: 1440px;
+    height: 30vh;
+    resize: none;
+    font-family: "Bad Script", cursive;
+    font-weight: 600;
+    font-style: normal;
+    margin-bottom: 15px;
+    border: 2px solid black;
+}
+.d-none {
+    display: none;
+}
+.d-flex {
+    display:flex;
+    
+}
+#content-deleted {
+    justify-content: center;
+    flex-direction: column-reverse;
+    margin-top: 50px;
+    width: 80vw;
+    max-width: 1440px;
+    position: absolute;
+    z-index: 10;
+    top: 20vh;
+    
+    background-color: rgba(255, 208, 1, 0.87);
+    text-overflow:ellipsis;
+    overflow-x: hidden;
+    white-space: nowrap;
+    align-self: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 2px 0 rgb(0 0 0 / 50%);
+    
+}
+.blur {
+    filter:blur(20px);
+    
+}
+
+
+ .card {
+    font-size: 22px;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 50%);
+    padding: 25px;
+    font-size: 30px;
+    margin-bottom: 32px;
+    border: solid 1px;
+    border-radius: 20px;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-top: 20px;
+    text-overflow:ellipsis;
+    overflow-x: hidden;
+    white-space:pre-line;
+    background-color: #d1f5f7;
+    text-align: start;
+    
+}
+
