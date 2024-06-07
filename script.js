@@ -8,7 +8,7 @@ function render() {
   let content = document.getElementById('content');
   let contentDeleted = document.getElementById('content-deleted');
   content.innerHTML = '';
-  contentDeleted.innerHTML = ''; //dslksdljkf
+  contentDeleted.innerHTML = ''; 
   addContent();
   addContentDeleted();
 }
