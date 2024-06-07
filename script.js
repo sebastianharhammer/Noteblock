@@ -2,6 +2,7 @@ let notes = [];
 let notesTitle = [];
 let notesDeleted = [];
 let notesTitleDeleted = [];
+let checksum;
 load();
 
 function render() {
@@ -63,6 +64,10 @@ function addContentDeleted() {
     {
     addContentDeletedHTML(i);
     }
+    document.getElementById('content-deleted').innerHTML += `
+    <img src="./img/recycle-solid.svg" id="recycle" onclick="showTrash(), addBlurTrash()">
+    <button onclick="closeTrash(), removeBlur()" id="btn-back-recycle">back</button>
+    `;
 }
 
 
@@ -78,6 +83,7 @@ function addContentDeletedHTML(i){
         <button onclick="restore(${i})">restore</button>
     </div>
     `;
+    
 }
 
 
@@ -150,6 +156,7 @@ function showTrash() {
   document.getElementById('content-deleted').classList.remove('d-none');
   document.getElementById('content-deleted').classList.add('d-flex');
   document.getElementById('placeholder-header').classList.remove('d-none');
+  closeNote();
 }
 
 
@@ -163,6 +170,7 @@ function closeTrash() {
 function showNote() {
   document.getElementById('new-note').classList.remove('d-none');
   document.getElementById('placeholder-header').classList.remove('d-none');
+  closeTrash();
   document.getElementById('note').value = ``;
   document.getElementById('title').value = ``;
 }
@@ -185,6 +193,6 @@ function addBlur() {
 }
 
 
-function removeBlur () {
+function removeBlur() {
   document.getElementById('content').classList.remove('blur');
 }

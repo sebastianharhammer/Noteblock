@@ -32,6 +32,11 @@ button {
     margin-top: 10px;
     font-size: 28px;
 }
+#btn-back-recycle {
+    align-self: flex-end;
+    margin-top: 25px;
+    margin-right: 25px
+}
 button:hover {
     filter: drop-shadow(2px 4px 6px rgb(10, 10, 10, 50%));
     transition-duration: 125ms;
@@ -40,6 +45,11 @@ button:hover {
 h1 {
     font-size: 75px;
     text-align: center;
+}
+h2 {
+    text-align: center;
+    background-color: grey;
+    border-radius: 10px black;
 }
 @media (max-width: 580px)
 {
@@ -83,6 +93,14 @@ nav {
     height: 50px;
     padding-bottom:10px;
     cursor: pointer;
+    
+}
+#recycle {
+    align-self: center;
+    padding-top: 10px;
+    width: 100px;
+    height: 100px;
+    
 }
 #trash:hover {
     filter: drop-shadow(2px 4px 6px rgb(10, 10, 10, 50%));
@@ -98,7 +116,7 @@ nav {
 #content {
     flex-direction: column-reverse;
     display: flex;
-    width: 90em;
+    width: 90vw;
     margin-top: 50px;
     margin-bottom: 50px;
     max-width: 1440px;
@@ -114,10 +132,10 @@ nav {
     padding: 10px;
     z-index: 999;
     position: absolute;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     max-width: 1440px;
-    top:30px;
+    top:10px;
     bottom:150px;
     margin-top:420px;
             }
