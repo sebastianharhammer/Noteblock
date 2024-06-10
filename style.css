@@ -51,16 +51,6 @@ h2 {
     background-color: grey;
     border-radius: 10px black;
 }
-@media (max-width: 580px)
-{
-    h1 {
-        font-size: 40px;
-    }
-    #plus {
-        width: 50px;
-        height: 50px;
-    }
-}
 
 main {
     display: flex;
@@ -97,9 +87,12 @@ nav {
 }
 #recycle {
     align-self: center;
-    padding-top: 10px;
+    padding-top: 20px;
     width: 100px;
     height: 100px;
+    justify-content: center;
+    padding-left: 20px;
+
     
 }
 #trash:hover {
@@ -137,14 +130,14 @@ nav {
     max-width: 1440px;
     top:10px;
     bottom:150px;
-    margin-top:420px;
+    margin-top: 300px;
             }
 #inp {
     display: flex;
     flex-direction: column;
 }
 #title {
-    width: 50vw;
+    width: 75vw;
     max-width: 1440px;
     font-size: 32px;
     font-family: "Bad Script", cursive;
@@ -154,7 +147,7 @@ nav {
 }
 #note {
     font-size: 30px;
-    width: 50vw;
+    width: 75vw;
     max-width: 1440px;
     height: 30vh;
     resize: none;
@@ -188,6 +181,11 @@ nav {
     align-self: center;
     border-radius: 20px;
     box-shadow: 0 10px 2px 0 rgb(0 0 0 / 50%);
+}
+#trash-bin {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
     
 }
 .blur {
@@ -213,5 +211,38 @@ nav {
     background-color: #d1f5f7;
     text-align: start;
     
+}
+@media (max-width: 580px)
+{
+    button {
+       font-size: 18px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    #plus {
+        width: 50px;
+        height: 50px;
+    }
+    #trash {
+        width: 35px;
+        height: 35px;
+    }
+    #recycle {
+        width: 50px;
+        height: 50px;
+    }
+    #title {
+        
+        font-size: 22px;
+        
+    }
+    #note {
+        font-size: 20px;
+       
+    }
+    .card {
+        font-size: 18px;
+    }
 }
 

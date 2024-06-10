@@ -65,9 +65,10 @@ function addContentDeleted() {
     addContentDeletedHTML(i);
     }
     document.getElementById('content-deleted').innerHTML += `
+    <div id="trash-bin">
     <img src="./img/recycle-solid.svg" id="recycle" onclick="showTrash(), addBlurTrash()">
     <button onclick="closeTrash(), removeBlur()" id="btn-back-recycle">back</button>
-    `;
+    </div>`;
 }
 
 
@@ -146,7 +147,7 @@ function load() {
 function emptyTrash() {
   notesDeleted.splice(0);
   notesTitleDeleted.splice(0);
-  removeBlur();
+  
   save();
   render();
 }
