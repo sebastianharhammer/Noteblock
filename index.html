@@ -13,11 +13,10 @@
   <body onload="render()">
     <header>
       <nav>
-        <img src="./img/square-plus-regular.svg" id="plus" onclick="showNote(), addBlur()">
-        <h1 onclick="render()">My Notes</h1>
+        <img src="./img/square-plus-regular.svg" id="plus" onclick="showNote(), addBlur()" title="add note">
+        <h1 onclick="render(), closeNote(), closeTrash(), removeBlur()">My Notes</h1>
         <div id="trash-group">
-        <img src="./img/trash-can-regular.svg" id="trash" onclick="showTrash(), addBlurTrash()">
-        <button onclick="emptyTrash()">empty</button>
+        <img src="./img/dumpster-solid.svg" id="trash" onclick="showTrash(), addBlurTrash()" title="open trash">
         </div>
       </nav>
     </header> 

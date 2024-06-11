@@ -49,12 +49,11 @@ function addContentHTML (i) {
     document.getElementById('content').innerHTML += `
       <div class="card">
         <b>${noteTitle}:</b>
-        <br>
         ${note}
-        <br>
         <button onclick="deleteNote(${i})">delete</button>
       </div>
-      `;
+      `
+      
 }
 
 
@@ -64,8 +63,9 @@ function addContentDeleted() {
     addContentDeletedHTML(i);
     }
     document.getElementById('content-deleted').innerHTML += `
-    <div id="trash-bin">
-    <img src="./img/recycle-solid.svg" id="recycle" onclick="showTrash(), addBlurTrash()">
+    <div id="trash-overlay">
+    <img src="./img/recycle-solid.svg" id="recycle" onclick="showTrash(), addBlurTrash(), restoreAll()" title="restore all">
+    <img src="./img/dumpster-fire-solid.svg" id="empty-trash" onclick="emptyTrash()" title="empty trash">
     <button onclick="closeTrash(), removeBlur()" id="btn-back-recycle">back</button>
     </div>`;
 }
@@ -77,9 +77,7 @@ function addContentDeletedHTML(i){
   document.getElementById('content-deleted').innerHTML += `
     <div class="card">
         <b>${noteTitle}:</b>
-        <br>
         ${note}
-        <br>
         <button onclick="restore(${i})">restore</button>
     </div>
     `;
@@ -110,6 +108,15 @@ function restore(i) {
     {removeBlur();}
   save();
   render();
+}
+
+function restoreAll() {
+  notes.push(...notesDeleted);
+  notesTitle.push(...notesTitleDeleted);
+  notesDeleted.splice(0);
+  notesTitleDeleted.splice(0);
+    save();
+    render();
 }
 
 

@@ -15,7 +15,7 @@ header {
     box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%);
     display: flex;
     justify-content: center;
-    height: 20vh;
+    height: 10vh;
 }
 #placeholder-header {
     height: 20vh;
@@ -33,9 +33,7 @@ button {
     font-size: 28px;
 }
 #btn-back-recycle {
-    align-self: flex-end;
-    margin-top: 25px;
-    margin-right: 25px
+    margin-right: 20px
 }
 button:hover {
     filter: drop-shadow(2px 4px 6px rgb(10, 10, 10, 50%));
@@ -45,6 +43,11 @@ button:hover {
 h1 {
     font-size: 75px;
     text-align: center;
+    cursor: pointer;
+}
+h1:hover {
+    filter: drop-shadow(2px 4px 6px rgb(10, 10, 10, 50%));
+    transition-duration: 125ms;
 }
 h2 {
     text-align: center;
@@ -71,7 +74,7 @@ nav {
     width: 100px;
     height: 100px;
     cursor: pointer;
-    padding-left: 20px;
+    
 }
 
 #plus:hover {
@@ -79,21 +82,36 @@ nav {
     transition-duration: 125ms;
 }
 #trash {
-    width: 50px;
-    height: 50px;
-    padding-bottom:10px;
+    width: 100px;
+    height: 100px;
     cursor: pointer;
     
 }
-#recycle {
-    align-self: center;
+#trash-overlay {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding-top: 20px;
+    padding-bottom: 10px;
+}
+#recycle {
     width: 100px;
     height: 100px;
-    justify-content: center;
-    padding-left: 20px;
-
-    
+    padding-left: 20px;  
+    cursor: pointer;  
+}
+#recycle:hover {
+    filter: drop-shadow(2px 4px 6px rgb(10, 10, 10, 50%));
+    transition-duration: 125ms;
+}
+#empty-trash {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;  
+}
+#empty-trash:hover {
+    filter: drop-shadow(2px 4px 6px rgb(10, 10, 10, 50%));
+    transition-duration: 125ms;
 }
 #trash:hover {
     filter: drop-shadow(2px 4px 6px rgb(10, 10, 10, 50%));
@@ -104,6 +122,7 @@ nav {
     flex-direction: column;
     align-items: center;
     padding-right: 20px;
+
 }
 
 #content {
@@ -122,14 +141,17 @@ nav {
     background-color: #aefcff;
     border: 5px solid rgb(41, 41, 41);
     border-radius: 10px;
-    padding: 10px;
+    padding: 25px;
     z-index: 999;
     position: absolute;
     padding-top: 50px;
     padding-bottom: 50px;
     max-width: 1920px;
-    
-    margin-top: 50px;
+    margin-right: 15vw;
+    margin-left: 15vw;
+    margin-top: 150px;
+    top: 10px;
+    bottom: 50px;
             }
 #inp {
     display: flex;
@@ -137,17 +159,18 @@ nav {
 }
 #title {
     width: 75vw;
-    max-width: 1920px;
+    max-width: 1600px;
     font-size: 32px;
     font-family: "Bad Script", cursive;
     font-weight: 800;
     font-style: normal;
     border: 2px solid black;
+
 }
 #note {
     font-size: 30px;
     width: 75vw;
-    max-width: 1920px;
+    max-width: 1600px;
     height: 30vh;
     resize: none;
     font-family: "Bad Script", cursive;
@@ -156,6 +179,7 @@ nav {
     margin-bottom: 15px;
     border: 2px solid black;
 }
+
 .d-none {
     display: none;
 }
@@ -167,15 +191,12 @@ nav {
     justify-content: center;
     flex-direction: column-reverse;
     margin-top: 50px;
-    width: 80vw;
+    width: 95vw;
     max-width: 1920px;
     position: absolute;
     z-index: 10;
-    top: 20vh;
+    top: 10vh;
     background-color: rgba(255, 208, 1, 0.87);
-    text-overflow:ellipsis;
-    overflow-x: hidden;
-    white-space: nowrap;
     align-self: center;
     border-radius: 20px;
     box-shadow: 0 10px 2px 0 rgb(0 0 0 / 50%);
@@ -193,9 +214,9 @@ nav {
 
 
  .card {
-    font-size: 22px;
+    
     box-shadow: 0 2px 2px 0 rgb(0 0 0 / 50%);
-    padding: 25px;
+    padding: 15px;
     font-size: 30px;
     margin-bottom: 32px;
     border: solid 1px;
@@ -207,9 +228,10 @@ nav {
     overflow-x: hidden;
     white-space:pre-line;
     background-color: #d1f5f7;
-    text-align: start;
+    
     
 }
+
 @media (max-width: 580px)
 {
     button {
@@ -223,10 +245,14 @@ nav {
         height: 50px;
     }
     #trash {
-        width: 35px;
-        height: 35px;
+        width: 50px;
+        height: 50px;
     }
     #recycle {
+        width: 50px;
+        height: 50px;
+    }
+    #empty-trash {
         width: 50px;
         height: 50px;
     }
