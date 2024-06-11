@@ -10,6 +10,7 @@
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "Noteblock"
+		"liveServer.settings.multiRootWorkspaceName": "Noteblock",
+		"liveServer.settings.port": 5501
 	}
 }

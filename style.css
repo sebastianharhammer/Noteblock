@@ -160,7 +160,7 @@ nav {
 }
 #title {
     width: 75vw;
-    max-width: 1600px;
+    max-width: 1000px;
     font-size: 32px;
     font-family: "Bad Script", cursive;
     font-weight: 800;
@@ -171,7 +171,7 @@ nav {
 #note {
     font-size: 30px;
     width: 75vw;
-    max-width: 1600px;
+    max-width: 1000px;
     height: 30vh;
     resize: none;
     font-family: "Bad Script", cursive;
