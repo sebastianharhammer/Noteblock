@@ -105,7 +105,9 @@ function restore(i) {
   notesDeleted.splice(i, 1);
   notesTitleDeleted.splice(i, 1);
   if (notesDeleted.length === 0)
-    {removeBlur();}
+    {removeBlur();
+      closeTrash();
+    }
   save();
   render();
 }
@@ -115,6 +117,8 @@ function restoreAll() {
   notesTitle.push(...notesTitleDeleted);
   notesDeleted.splice(0);
   notesTitleDeleted.splice(0);
+  closeTrash();
+  removeBlur();
     save();
     render();
 }
