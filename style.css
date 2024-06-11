@@ -63,7 +63,7 @@ nav {
     width: 95vw;
     align-items: center;
     align-content: center;
-    max-width: 1440px;
+    max-width: 1920px;
     
 }
 
@@ -112,7 +112,7 @@ nav {
     width: 90vw;
     margin-top: 50px;
     margin-bottom: 50px;
-    max-width: 1440px;
+    max-width: 1920px;
     
 }
 .new-note {
@@ -127,10 +127,9 @@ nav {
     position: absolute;
     padding-top: 50px;
     padding-bottom: 50px;
-    max-width: 1440px;
-    top:10px;
-    bottom:150px;
-    margin-top: 300px;
+    max-width: 1920px;
+    
+    margin-top: 50px;
             }
 #inp {
     display: flex;
@@ -138,7 +137,7 @@ nav {
 }
 #title {
     width: 75vw;
-    max-width: 1440px;
+    max-width: 1920px;
     font-size: 32px;
     font-family: "Bad Script", cursive;
     font-weight: 800;
@@ -148,7 +147,7 @@ nav {
 #note {
     font-size: 30px;
     width: 75vw;
-    max-width: 1440px;
+    max-width: 1920px;
     height: 30vh;
     resize: none;
     font-family: "Bad Script", cursive;
@@ -169,11 +168,10 @@ nav {
     flex-direction: column-reverse;
     margin-top: 50px;
     width: 80vw;
-    max-width: 1440px;
+    max-width: 1920px;
     position: absolute;
     z-index: 10;
     top: 20vh;
-    
     background-color: rgba(255, 208, 1, 0.87);
     text-overflow:ellipsis;
     overflow-x: hidden;

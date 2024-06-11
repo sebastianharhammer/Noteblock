@@ -2,7 +2,6 @@ let notes = [];
 let notesTitle = [];
 let notesDeleted = [];
 let notesTitleDeleted = [];
-let checksum;
 load();
 
 function render() {
@@ -53,7 +52,7 @@ function addContentHTML (i) {
         <br>
         ${note}
         <br>
-        <button onclick="deleteNote(${i})">löschen</button>
+        <button onclick="deleteNote(${i})">delete</button>
       </div>
       `;
 }
@@ -147,7 +146,6 @@ function load() {
 function emptyTrash() {
   notesDeleted.splice(0);
   notesTitleDeleted.splice(0);
-  
   save();
   render();
 }
@@ -184,10 +182,9 @@ function closeNote() {
 
 
 function addBlurTrash() {
-  if (notesDeleted.length !== 0)
-    {
+ 
   document.getElementById('content').classList.add('blur');
-}
+
 }
 function addBlur() {
   document.getElementById('content').classList.add('blur');
