@@ -46,7 +46,7 @@ function addContent() {
 function addContentHTML (i) {
     const note = notes[i];
     const noteTitle = notesTitle[i];
-    document.getElementById('content').innerHTML += `
+    document.getElementById('content').innerHTML += /*html*/`
       <div class="card">
         <b>${noteTitle}:</b>
         ${note}
@@ -62,7 +62,7 @@ function addContentDeleted() {
     {
     addContentDeletedHTML(i);
     }
-    document.getElementById('content-deleted').innerHTML += `
+    document.getElementById('content-deleted').innerHTML += /*html*/`
     <div id="trash-overlay">
     <img src="./img/recycle-solid.svg" id="recycle" onclick="showTrash(), addBlurTrash(), restoreAll()" title="restore all">
     <img src="./img/dumpster-fire-solid.svg" id="empty-trash" onclick="emptyTrash()" title="empty trash">
@@ -74,7 +74,7 @@ function addContentDeleted() {
 function addContentDeletedHTML(i){
   const note = notesDeleted[i];
   const noteTitle = notesTitleDeleted[i];
-  document.getElementById('content-deleted').innerHTML += `
+  document.getElementById('content-deleted').innerHTML += /*html*/`
     <div class="card">
         <b>${noteTitle}:</b>
         ${note}
