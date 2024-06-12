@@ -64,7 +64,7 @@ function addContentDeleted() {
     }
     document.getElementById('content-deleted').innerHTML += /*html*/`
     <div id="trash-overlay">
-    <img src="./img/recycle-solid.svg" id="recycle" onclick="showTrash(), addBlurTrash(), restoreAll()" title="restore all">
+    <img src="./img/recycle-solid.svg" id="recycle" onclick="showTrash(), addBlur(), restoreAll()" title="restore all">
     <img src="./img/dumpster-fire-solid.svg" id="empty-trash" onclick="emptyTrash()" title="empty trash">
     <button onclick="closeTrash(), removeBlur()" id="btn-back-recycle">back</button>
     </div>`;
@@ -191,12 +191,6 @@ function closeNote() {
   document.getElementById('placeholder-header').classList.add('d-none');
 }
 
-
-function addBlurTrash() {
- 
-  document.getElementById('content').classList.add('blur');
-
-}
 function addBlur() {
   document.getElementById('content').classList.add('blur');
 }
