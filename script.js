@@ -157,16 +157,22 @@ function load() {
 function emptyTrash() {
   notesDeleted.splice(0);
   notesTitleDeleted.splice(0);
+  closeTrash();
+  removeBlur();
   save();
   render();
 }
 
 
 function showTrash() {
+  if (notesDeleted.length>0)
+    {
   document.getElementById('content-deleted').classList.remove('d-none');
   document.getElementById('content-deleted').classList.add('d-flex');
   document.getElementById('placeholder-header').classList.remove('d-none');
+  addBlur();
   closeNote();
+}
 }
 
 

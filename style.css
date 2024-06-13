@@ -192,7 +192,8 @@ nav {
     justify-content: center;
     flex-direction: column-reverse;
     margin-top: 50px;
-    width: 95vw;
+    width: 90vw;
+    border: 2px solid black;
     max-width: 1920px;
     position: absolute;
     z-index: 10;
@@ -230,8 +231,7 @@ nav {
     overflow-x: hidden;
     white-space:pre-line;
     background-color: #d1f5f7;
-    text-align: start;
-    
+        
     
 }
 
