@@ -62,8 +62,14 @@ function addContentDeleted() {
     {
     addContentDeletedHTML(i);
     }
-    document.getElementById('content-deleted').innerHTML += /*html*/`
-    <div id="trash-overlay">
+    
+    returnHTML();
+}
+
+
+function returnHTML() {document.getElementById('content-deleted').innerHTML += /*html*/
+  `
+  <div id="trash-overlay">
     <img src="./img/recycle-solid.svg" id="recycle" onclick="showTrash(), addBlur(), restoreAll()" title="restore all">
     <img src="./img/dumpster-fire-solid.svg" id="empty-trash" onclick="emptyTrash()" title="empty trash">
     <button onclick="closeTrash(), removeBlur()" id="btn-back-recycle">back</button>
